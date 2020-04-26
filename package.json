@@ -1,22 +1,29 @@
 {
   "name": "vectorscope-viewer",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
+  "version": "0.1.0",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server",
+    "build": "npm run clean && webpack -p",
+    "clean": "rm -rf dist"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ppconde/vectorscope-viewer.git"
+  "browserslist": "defaults",
+  "dependencies": {
+    "@babel/runtime": "^7.9.2",
+    "core-js": "^3.6.5",
+    "p5": "^1.0.0",
+    "react": "^16.13.1",
+    "tone": "^13.8.25"
   },
-  "author": "Pedro Conde",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ppconde/vectorscope-viewer/issues"
-  },
-  "homepage": "https://github.com/ppconde/vectorscope-viewer#readme"
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.5",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
 }
